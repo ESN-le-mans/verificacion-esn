@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESN Le Mans Instagram Verification</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function captchaVerified() {
+            // Redirect immediately after solving the CAPTCHA
+            window.location.href = "https://www.instagram.com/YOUR_INSTAGRAM_PAGE/";
+        }
+    </script>
+</head>
+<body>
+    <h2>📸 Almost there... Just a quick check! 🕵️‍♂️</h2>
+    <p>Before you reach our awesome Instagram page, let’s make sure you're not a bot. 🤖➡️❌</p>
+
+    <div class="g-recaptcha" 
+         data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z" 
+         data-callback="captchaVerified">
+    </div>
+</body>
+</html>
