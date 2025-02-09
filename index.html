@@ -6,22 +6,19 @@
     <title>ESN Le Mans Verification</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        function verifyCaptcha() {
-            var response = grecaptcha.getResponse();
-            if (response.length === 0) {
-                alert("⚠️ Nice try, but you need to prove you're not a robot first! 🤖");
-            } else {
-                window.location.href = "https://chat.whatsapp.com/DZyWuUrR3nn46aYVwfJGoX";
-            }
+        function captchaVerified() {
+            // Redirect immediately after solving the CAPTCHA
+            window.location.href = "https://chat.whatsapp.com/DZyWuUrR3nn46aYVwfJGoX";
         }
     </script>
 </head>
 <body>
-    <h2> Beep boop... are you a robot? 🤖🤔</h2>
+    <h2> Beep boop... are you a robot? 🤖</h2>
     <p>Just checking you're not a robot trying to join the group. No offense, AI overlords. </p>
 
-    <form onsubmit="event.preventDefault(); verifyCaptcha();">
-        <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z"></div>
-    </form>
+    <div class="g-recaptcha" 
+         data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z" 
+         data-callback="captchaVerified">
+    </div>
 </body>
 </html>
