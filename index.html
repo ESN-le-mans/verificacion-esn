@@ -7,74 +7,23 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         function verifyCaptcha() {
-            var response = grecaptcha.getResponse(); // Get CAPTCHA response
+            var response = grecaptcha.getResponse();
             if (response.length === 0) {
                 alert("⚠️ Please complete the CAPTCHA to continue.");
             } else {
-                // Redirect to WhatsApp group
                 window.location.href = "https://chat.whatsapp.com/DZyWuUrR3nn46aYVwfJGoX";
             }
         }
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 350px;
-            width: 90%;
-        }
-        h2 {
-            color: #0077b6;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #555;
-        }
-        .g-recaptcha {
-            margin: 15px auto;
-            display: inline-block;
-        }
-        button {
-            background: #0077b6;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #005f8d;
-        }
-        .logo {
-            width: 80px;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/ESN_logo.png" alt="ESN Logo" class="logo">
-        <h2>Security Verification</h2>
-        <p>To join the ESN Le Mans WhatsApp group, please verify that you're human.</p>
+    <h2>🎉 Welcome to ESN Le Mans! 🌍</h2>
+    <p>Before joining our WhatsApp group, please verify that you're human. 🤖➡️❌</p>
 
-        <form onsubmit="event.preventDefault(); verifyCaptcha();">
-            <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z"></div>
-            <br>
-            <button type="submit">Join WhatsApp Group</button>
-        </form>
-    </div>
+    <form onsubmit="event.preventDefault(); verifyCaptcha();">
+        <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z"></div>
+        <br>
+        <button type="submit">✅ Join WhatsApp Group</button>
+    </form>
 </body>
 </html>
