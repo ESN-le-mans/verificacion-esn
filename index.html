@@ -9,7 +9,7 @@
         function verifyCaptcha() {
             var response = grecaptcha.getResponse();
             if (response.length === 0) {
-                alert("⚠️ Please complete the CAPTCHA to continue.");
+                alert("⚠️ Nice try, but you need to prove you're not a robot first! 🤖");
             } else {
                 window.location.href = "https://chat.whatsapp.com/DZyWuUrR3nn46aYVwfJGoX";
             }
@@ -17,13 +17,11 @@
     </script>
 </head>
 <body>
-    <h2>🎉 Welcome to ESN Le Mans! 🌍</h2>
-    <p>Before joining our WhatsApp group, please verify that you're human. 🤖➡️❌</p>
+    <h2>🤖 Beep boop... almost there! 😁</h2>
+    <p>Just checking you're not a robot trying to join the group. No offense, AI overlords. </p>
 
     <form onsubmit="event.preventDefault(); verifyCaptcha();">
         <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z"></div>
-        <br>
-        <button type="submit">✅ Join WhatsApp Group</button>
     </form>
 </body>
 </html>
