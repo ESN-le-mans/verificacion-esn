@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESN Le Mans Verification</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function verifyCaptcha() {
+            var response = grecaptcha.getResponse(); // Get CAPTCHA response
+            if (response.length === 0) {
+                alert("Please complete the CAPTCHA to continue.");
+            } else {
+                // Redirect to WhatsApp group
+                window.location.href = "https://chat.whatsapp.com/YOUR_GROUP_LINK";
+            }
+        }
+    </script>
 </head>
 <body>
     <h2>Security Verification</h2>
     <p>Please complete the CAPTCHA to access the WhatsApp group.</p>
 
-    <form action="verificar.php" method="POST">
-        <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z
-"></div>
+    <form onsubmit="event.preventDefault(); verifyCaptcha();">
+        <div class="g-recaptcha" data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z"></div>
         <br>
-        <input type="submit" value="Verificar">
+        <button type="submit">Verify</button>
     </form>
 </body>
 </html>
+
