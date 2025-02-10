@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESN Le Mans Official Website Verification</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function captchaVerified() {
+            // Redirect immediately after solving the CAPTCHA
+            window.location.href = "https://le-mans.esnfrance.org/";
+        }
+    </script>
+</head>
+<body>
+    <h2>🌍 Welcome to Our Official Website! 🚀</h2>
+    <p>One last step before you explore… Just proving you're not a robot! 🤖➡️❌</p>
+
+    <div class="g-recaptcha" 
+         data-sitekey="6Le3DNIqAAAAALgvsSgg8DchbSj4m8FshOSzGA4z" 
+         data-callback="captchaVerified">
+    </div>
+</body>
+</html>
